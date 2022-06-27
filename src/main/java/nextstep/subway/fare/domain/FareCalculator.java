@@ -23,9 +23,7 @@ public class FareCalculator {
         Fare lineFare = lineFarePolicy.calculate(lines);
         Fare distanceLineFare = distanceFare.plus(lineFare);
 
-        Fare calculate = ageFarePolicy.calculate(distanceLineFare, age);
-
-        return calculate;
+        return ageFarePolicy.calculate(distanceLineFare, age);
     }
 
     public Fare calculateWithoutAge(Distance distance, List<Line> lines) {
